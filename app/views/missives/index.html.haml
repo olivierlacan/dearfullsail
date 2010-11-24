@@ -1,0 +1,25 @@
+%h1 Listing missives
+
+%table
+  %tr
+    %th Title
+    %th Message
+    %th Date
+    %th Type
+    %th
+    %th
+    %th
+
+  - @missives.each do |missife|
+    %tr
+      %td= missife.title
+      %td= missife.message
+      %td= missife.date
+      %td= missife.type
+      %td= link_to 'Show', missife
+      %td= link_to 'Edit', edit_missife_path(missife)
+      %td= link_to 'Destroy', missife, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Missive', new_missife_path
