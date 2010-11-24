@@ -6,9 +6,9 @@
         - @degree.errors.full_messages.each do |msg|
           %li= msg
 
-  = f.inputs do
+  - f.inputs do
     = f.input :name
     = f.input :initials
     
-  = f.buttons do
+  - f.buttons do
     = f.commit_button
