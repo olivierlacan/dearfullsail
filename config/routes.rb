@@ -1,8 +1,12 @@
 Dearfullsail::Application.routes.draw do
+  
+  resources :degrees
+
+  root :to => "messages#index"
+  
+  resources :messages
   resources :students
-
-  resources :missives
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
