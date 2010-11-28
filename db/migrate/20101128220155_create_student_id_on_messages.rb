@@ -1,6 +1,6 @@
 class CreateStudentIdOnMessages < ActiveRecord::Migration
   def self.up
-    add_column :messages, :student_id
+    add_column :messages, :student_id, :string
   end
 
   def self.down
