@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  belongs_to :degrees
+  belongs_to :degree
   has_many :messages
   
   # Validations
