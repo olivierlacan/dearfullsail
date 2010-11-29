@@ -118,48 +118,48 @@ pre, code, kbd, samp {
   font-family: monospace, sans-serif;
 }
 
-/* line 16, ../../../app/stylesheets/partials/_example.scss */
+/* line 14, ../../../app/stylesheets/partials/_example.sass */
 body, select, input, textarea {
   color: #444444;
 }
 
-/* line 18, ../../../app/stylesheets/partials/_example.scss */
+/* line 17, ../../../app/stylesheets/partials/_example.sass */
 html {
   overflow-y: scroll;
 }
 
-/* line 20, ../../../app/stylesheets/partials/_example.scss */
+/* line 20, ../../../app/stylesheets/partials/_example.sass */
 a, a:active, a:visited {
   color: #607890;
 }
 
-/* line 21, ../../../app/stylesheets/partials/_example.scss */
+/* line 23, ../../../app/stylesheets/partials/_example.sass */
 a:hover {
   color: #003366;
 }
 
-/* line 23, ../../../app/stylesheets/partials/_example.scss */
+/* line 26, ../../../app/stylesheets/partials/_example.sass */
 ul, ol {
   margin-left: 1.8em;
 }
 
-/* line 24, ../../../app/stylesheets/partials/_example.scss */
+/* line 29, ../../../app/stylesheets/partials/_example.sass */
 ol {
   list-style-type: decimal;
 }
 
-/* line 26, ../../../app/stylesheets/partials/_example.scss */
+/* line 32, ../../../app/stylesheets/partials/_example.sass */
 td, td img {
   vertical-align: top;
 }
 
-/* line 28, ../../../app/stylesheets/partials/_example.scss */
+/* line 35, ../../../app/stylesheets/partials/_example.sass */
 sub {
   vertical-align: sub;
   font-size: smaller;
 }
 
-/* line 30, ../../../app/stylesheets/partials/_example.scss */
+/* line 38, ../../../app/stylesheets/partials/_example.sass */
 sup {
   vertical-align: super;
   font-size: smaller;
@@ -244,7 +244,7 @@ nav ul, nav li {
   margin: 0;
 }
 
-/* line 52, ../../../app/stylesheets/partials/_example.scss */
+/* line 60, ../../../app/stylesheets/partials/_example.sass */
 .ir {
   text-indent: -119988px;
   overflow: hidden;
@@ -253,20 +253,20 @@ nav ul, nav li {
   background-repeat: no-repeat;
 }
 
-/* line 54, ../../../app/stylesheets/partials/_example.scss */
+/* line 63, ../../../app/stylesheets/partials/_example.sass */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 56, ../../../app/stylesheets/partials/_example.scss */
+/* line 66, ../../../app/stylesheets/partials/_example.sass */
 .visuallyhidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 58, ../../../app/stylesheets/partials/_example.scss */
+/* line 69, ../../../app/stylesheets/partials/_example.sass */
 .clearfix {
   *zoom: 1;
 }
@@ -347,22 +347,22 @@ nav ul, nav li {
 @media all and (orientation:portrait) {}
 @media all and (orientation:landscape) {}
 @media screen and (max-device-width: 480px) {}
-/* line 8, ../../../app/stylesheets/partials/_page.scss */
+/* line 8, ../../../app/stylesheets/partials/_page.sass */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-/* line 14, ../../../app/stylesheets/partials/_page.scss */
+/* line 13, ../../../app/stylesheets/partials/_page.sass */
 strong, th {
   font-weight: bold;
 }
 
-/* line 18, ../../../app/stylesheets/partials/_page.scss */
+/* line 16, ../../../app/stylesheets/partials/_page.sass */
 small {
   font-size: 85%;
 }
 
-/* line 27, ../../../app/stylesheets/partials/_page.scss */
+/* line 26, ../../../app/stylesheets/partials/_page.sass */
 input:invalid, textarea:invalid {
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
@@ -376,8 +376,25 @@ input:invalid, textarea:invalid {
   box-shadow: red 0 0 5px 0;
 }
 
-/* line 32, ../../../app/stylesheets/partials/_page.scss */
+/* line 30, ../../../app/stylesheets/partials/_page.sass */
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
+}
+
+/* line 38, ../../../app/stylesheets/partials/_page.sass */
+body {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* line 46, ../../../app/stylesheets/partials/_page.sass */
+#main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 52, ../../../app/stylesheets/partials/_page.sass */
+h1 {
+  font-size: 2em;
 }
