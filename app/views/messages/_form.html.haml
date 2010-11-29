@@ -7,7 +7,7 @@
           %li= msg
   - f.inputs do
     = f.input :title
-    = f.input :description
+    = f.input :description, :as => :text
     = f.input :date
     = f.input :type
     = f.input :student_id, :as => :select, :collection => Student.all
