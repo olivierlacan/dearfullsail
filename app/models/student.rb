@@ -1,6 +1,7 @@
 class Student < ActiveRecord::Base
   belongs_to :degree
   has_many :messages
+  has_many :votes
   
   # Validations
   validates :first_name,
