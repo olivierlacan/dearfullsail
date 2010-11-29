@@ -8,7 +8,7 @@ class Degree < ActiveRecord::Base
             :presence => true
             
   def to_s
-    self.name
+    self.initials
   end
             
 end
