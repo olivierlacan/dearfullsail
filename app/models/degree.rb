@@ -7,4 +7,8 @@ class Degree < ActiveRecord::Base
   validates :initials,
             :presence => true
             
+  def to_s
+    self.name
+  end
+            
 end
