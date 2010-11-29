@@ -11,5 +11,7 @@
     = f.input :bio
     = f.input :date
     = f.input :email
+    = f.input :degree_id, :as => :select, :collection => Degree.all
+    
   - f.buttons do
     = f.commit_button
