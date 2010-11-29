@@ -6,6 +6,7 @@
     %th Description
     %th Date
     %th Type
+    %th Student
     %th
     %th
     %th
@@ -16,6 +17,7 @@
       %td= message.description
       %td= message.date
       %td= message.type
+      %td= message.student
       %td= link_to 'Show', message
       %td= link_to 'Edit', edit_message_path(message)
       %td= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete
