@@ -2,11 +2,12 @@
 
 %table
   %tr
-    %th Title
-    %th Description
-    %th Date
-    %th Type
-    %th Student
+    %th{ :class => 'title' } Title
+    %th{ :class => 'description' } Description
+    %th{ :class => 'date' } Date
+    %th{ :class => 'type' } Type
+    %th{ :class => 'student' } Student
+    %th{ :class => 'degree' } Degree
     %th
     %th
     %th
@@ -18,6 +19,7 @@
       %td= message.date
       %td= message.type
       %td= message.student
+      %td= message.student.degree
       %td= link_to 'Show', message
       %td= link_to 'Edit', edit_message_path(message)
       %td= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete
