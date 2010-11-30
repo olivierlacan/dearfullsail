@@ -8,10 +8,10 @@
   - f.inputs do
     = f.input :first_name
     = f.input :last_name
-    = f.input :bio
-    = f.input :date
-    = f.input :email
-    = f.input :password
+    = f.input :bio, :as => :text, :label => "About"
+    = f.input :date, :label => "Starting Date"
+    = f.input :email, :label => "Full Sail Email"
+    = f.input :password, :as => :password
     = f.input :degree_id, :as => :select, :collection => Degree.all
     
   - f.buttons do
