@@ -53,7 +53,24 @@ h1
   :font-size 2em
 table
   tr
+    th
+      .title
+        :width 30%
+      .description
+        :width 20%
+        :background blue
+        
     td
       :padding 1em
   tr:nth-child(even)
     :background #eee
+  
+//-----------------------------------  
+// Forms
+//-----------------------------------
+
+form
+  .formtastic 
+    fieldset
+      :overflow hidden
+      :background blue

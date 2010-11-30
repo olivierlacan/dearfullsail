@@ -399,11 +399,26 @@ h1 {
   font-size: 2em;
 }
 
-/* line 56, ../../../app/stylesheets/partials/_page.sass */
+/* line 57, ../../../app/stylesheets/partials/_page.sass */
+table tr th .title {
+  width: 30%;
+}
+/* line 59, ../../../app/stylesheets/partials/_page.sass */
+table tr th .description {
+  width: 20%;
+  background: blue;
+}
+/* line 63, ../../../app/stylesheets/partials/_page.sass */
 table tr td {
   padding: 1em;
 }
-/* line 58, ../../../app/stylesheets/partials/_page.sass */
+/* line 65, ../../../app/stylesheets/partials/_page.sass */
 table tr:nth-child(even) {
   background: #eeeeee;
+}
+
+/* line 74, ../../../app/stylesheets/partials/_page.sass */
+form .formtastic fieldset {
+  overflow: hidden;
+  background: blue;
 }
