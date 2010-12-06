@@ -1,5 +1,6 @@
 Dearfullsail::Application.routes.draw do
   
+  resources :votes
   resources :degrees
 
   root :to => "messages#index"

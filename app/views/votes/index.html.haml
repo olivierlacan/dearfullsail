@@ -1,0 +1,17 @@
+%h1 Listing Votes
+
+%table
+  %tr
+    %th Name
+    %th Initials
+    %th
+    %th
+    %th
+
+  - @votes.each do |vote|
+    %tr
+      %td= vote.student
+      %td= vote.message
+      %td= link_to 'Show', vote
+      %td= link_to 'Edit', edit_vote_path(degree)
+      %td= link_to 'Destroy', vote, :confirm => 'Are you sure?', :method => :delete

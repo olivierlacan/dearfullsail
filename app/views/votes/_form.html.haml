@@ -1,0 +1,15 @@
+= semantic_form_for @vote do |f|
+  -if @vote.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@vote.errors.count, "error")} prohibited this message from being saved:"
+      %ul
+        - @vote.errors.full_messages.each do |msg|
+          %li= msg
+  - f.inputs do
+    = f.input :message_id
+    = f.input :student_id
+    = f.input :created_at
+    = f.input :updated_at
+
+  - f.buttons do
+    = f.commit_button
