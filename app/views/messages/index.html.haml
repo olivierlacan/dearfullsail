@@ -2,6 +2,7 @@
 
 %table
   %tr
+    %th Votes
     %th{ :class => 'title' } Title
     %th{ :class => 'description' } Description
     %th{ :class => 'date' } Date
@@ -14,6 +15,10 @@
 
   - @messages.each do |message|
     %tr
+      %td 
+        =link_to 'Vote', message_votes_path(message, :charge => 1), :method => :post
+        =message.votes.map(&:charge).sum
+        =link_to 'Downvote', message_votes_path(message, :charge => -1), :method => :post
       %td= message.title
       %td= message.description
       %td= message.date
