@@ -5,7 +5,9 @@ Dearfullsail::Application.routes.draw do
 
   root :to => "messages#index"
   
-  resources :messages
+  resources :messages do 
+    resources :votes
+  end
   resources :students
   
   # The priority is based upon order of creation:
