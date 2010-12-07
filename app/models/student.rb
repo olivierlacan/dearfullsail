@@ -3,6 +3,8 @@ class Student < ActiveRecord::Base
   has_many :messages
   has_many :votes
   
+  devise :database_authenticatable, :confirmable, :recoverable, :rememberable, :trackable, :validatable
+  
   # Validations
   validates :first_name,
             :presence => true
