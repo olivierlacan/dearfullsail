@@ -8,6 +8,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'formtastic'
+gem 'devise'
 
 # gems only required for development and not app functionality
 group :development, :test do
