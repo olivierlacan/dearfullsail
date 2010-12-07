@@ -1,2 +1,10 @@
-%h1 Votes#show
-%p Find me in app/views/votes/show.html.haml
+%h1 Show vote
+%p#notice= notice
+
+%p
+  %b Title:
+  = @vote
+
+= link_to 'Edit', edit_vote_path(@vote)
+\|
+= link_to 'Back', votes_path
