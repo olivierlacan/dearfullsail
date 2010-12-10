@@ -33,13 +33,29 @@ ActiveRecord::Schema.define(:version => 20101207042953) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "bio"
+    t.integer  "degree_id"
     t.date     "date"
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email"
-    t.string   "degree_id"
-    t.string   "password"
   end
+
+  add_index "students", ["confirmation_token"], :name => "index_students_on_confirmation_token", :unique => true
+  add_index "students", ["email"], :name => "index_students_on_email", :unique => true
+  add_index "students", ["reset_password_token"], :name => "index_students_on_reset_password_token", :unique => true
 
   create_table "votes", :force => true do |t|
     t.string   "message_id"
