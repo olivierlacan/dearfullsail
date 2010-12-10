@@ -5,7 +5,7 @@
       %ul
         - @student.errors.full_messages.each do |msg|
           %li= msg
-  - f.inputs do
+  = f.inputs do
     = f.input :first_name
     = f.input :last_name
     = f.input :bio, :as => :text, :label => "About"
@@ -14,5 +14,5 @@
     = f.input :password, :as => :password
     = f.input :degree_id, :as => :select, :collection => Degree.all
     
-  - f.buttons do
+  = f.buttons do
     = f.commit_button
