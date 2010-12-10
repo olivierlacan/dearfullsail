@@ -1,14 +1,15 @@
 Dearfullsail::Application.routes.draw do
   
+  devise_for :students
+
   resources :votes
   resources :degrees
-
-  root :to => "messages#index"
-  
   resources :messages do 
     resources :votes
   end
   resources :students
+  
+  root :to => "messages#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
