@@ -1,4 +1,10 @@
 %h1=link_to "Dear Full Sail,", "/"
+%ul
+  - if current_student
+    %li= link_to 'Sign Out', destroy_student_session_path
+  - else
+    %li= link_to 'Sign In', new_student_session_path
+  
 -# = semantic_form_for @student do |f|
 -#   - f.inputs do
 -#     = f.input :email
