@@ -1,34 +1,22 @@
 %h1 Listing messages
+%button{ :class => 'newmessage' }= link_to 'New Message', new_message_path
 
-%table
-  %tr
-    %th Votes
-    %th{ :class => 'title' } Title
-    %th{ :class => 'description' } Description
-    %th{ :class => 'date' } Date
-    %th{ :class => 'type' } Type
-    %th{ :class => 'student' } Student
-    %th{ :class => 'degree' } Degree
-    %th
-    %th
-    %th
-
+%ul
   - @messages.each do |message|
-    %tr
-      %td 
-        =link_to 'Vote', message_votes_path(message, :charge => 1), :method => :post
+    %li
+      .vote
+        =link_to '', message_votes_path(message, :charge => 1), :method => :post, "data-icon" => '&', :class => 'icon'
         =message.votes.map(&:charge).sum
-        =link_to 'Downvote', message_votes_path(message, :charge => -1), :method => :post
-      %td= message.title
-      %td= message.description
-      %td= message.date
-      %td= message.type
-      %td= message.student
-      %td= message.student.degree
-      %td= link_to 'Show', message
-      %td= link_to 'Edit', edit_message_path(message)
-      %td= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete
+        =link_to '', message_votes_path(message, :charge => -1), :method => :post, "data-icon" => '_', :class => 'icon'
+      %article
+        %header
+          %h1= link_to message.title, message
+          //%p= message.student
+        %section
+          = message.description
+        %footer
+          //= message.date
+          = message.student.degree
 
-%br
-
-= link_to 'New Message', new_message_path
+          = link_to '', edit_message_path(message), :title => 'Edit', :class => 'icon', "data-icon" => 'p'
+          = link_to '', message, :confirm => 'Are you sure?', :method => :delete, :title => 'Destroy', :class => 'icon', "data-icon" => '#'
