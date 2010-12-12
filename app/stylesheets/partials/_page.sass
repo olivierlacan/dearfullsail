@@ -1,70 +1,95 @@
 @import compass/css3
 
-//-----------------------------------------------
-// The following html5-boilerplate styles should
-// probably be customized for each site
-//-----------------------------------------------
-
-h1, h2, h3, h4, h5, h6
-  // Bold might not be the best choice if you are
-  // embedding font faces that are already bold
-  font-weight: bold
-
-strong, th
-  font-weight: bold
-
-small
-  // Use font-size mixin to convert to percentage for YUI
-  // http://developer.yahoo.com/yui/3/cssfonts/#fontsize
-  +font-size(11px)
-  // approx 85% when base-font-size eq 13px
-
-// Add the 'required' attribute on your
-// inputs if you want to use these
-input:valid, textarea:valid
-
-input:invalid, textarea:invalid
-  +border-radius(1px)
-  +box-shadow(red, 0, 0, 5px, 0)
-
-.no-boxshadow input:invalid,
-.no-boxshadow textarea:invalid
-  background-color: #f0dddd
-
 //-----------------------------------
 // Add your own custom styles below
 //-----------------------------------
 
 body
-  width: 70%
-  margin: 0 auto
+  :width 960px
+  :margin 0 auto
 
 #container
-
-header
+  >header
+    :padding 2em 1em
+    >h1
+      :font-size 3em
+      :width 80%
+      :float left
+    >ul
+      :list-style none
+      :margin 0
+      :float right
+      :display block
+      :width 20%
+      :line-height 2em
+      :text-align right
+      >li
+        :padding 0 1em
+        :background transparentize(black, .9)
 
 #main
-  width: 90%
-  margin: 0 auto
+  :width 90%
+  :margin 3em auto
+  :clear both
+  >h1
+    :font-size 2em
+    :padding 1em 1em .25em 0
+    :margin 0 0 .5em 0
+    :border-bottom 1px solid black
+  .newmessage
+    :float right
+    :margin-top -3em
+  ul
+    li
+      :display block
+      :clear both
+      :border-bottom 2px solid white
+      :margin-bottom 1em
+      :overflow hidden
+        
+      .vote
+        :display block
+        :float left
+        :width 4%
+        :padding .5em 0
+        :background rgba(0,0,0,.7)
+        :border-radius 5px 0 0 5px
+        :color white
+        :text-align center
+        :font-size 1.3em
+        a
+          :display block
+          :margin 15px 0
+          :color white
+          
+      article
+        :float left
+        :width 95%
+        :padding 0
+        :border-right 1px solid white
+        header
+          :padding 0 2em
+          h1
+            :display block
+            :clear both
+            :font-size 2em
+          p
+            :clear left
+        section
+          :padding .5em 2em
+        footer
+          :text-align right
+          :padding .5em 1em 1em
+          a
+            :display block
+            :float right
+            :clear both
+            :margin 1em
+
 
 footer
-
-h1
-  :font-size 2em
-table
-  tr
-    th
-      .title
-        :width 30%
-      .description
-        :width 20%
-        :background blue
-        
-    td
-      :padding 1em
-  tr:nth-child(even)
-    :background #eee
   
+
 //-----------------------------------  
 // Forms
 //-----------------------------------
