@@ -5,17 +5,17 @@
     %li
       .vote
         =link_to '', message_votes_path(message, :charge => 1), :method => :post, "data-icon" => '&', :class => 'icon'
-        =message.votes.map(&:charge).sum
+        =message.votes.charge
         =link_to '', message_votes_path(message, :charge => -1), :method => :post, "data-icon" => '_', :class => 'icon'
       %article
         %header
           %h1= link_to message.title, message
+          %p{ :class => 'degree' }= message.student.degree
           //%p= message.student
         %section
           = message.description
         %footer
           //= message.date
-          = message.student.degree
 
           = link_to '', edit_message_path(message), :title => 'Edit', :class => 'icon', "data-icon" => 'p'
           = link_to '', message, :confirm => 'Are you sure?', :method => :delete, :title => 'Destroy', :class => 'icon', "data-icon" => '#'
