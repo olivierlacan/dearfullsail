@@ -5,7 +5,7 @@
     %li
       .vote
         =link_to '', message_votes_path(message, :charge => 1), :method => :post, "data-icon" => '&', :class => 'icon'
-        =message.votes.charge
+        =message.vote_count
         =link_to '', message_votes_path(message, :charge => -1), :method => :post, "data-icon" => '_', :class => 'icon'
       %article
         %header
