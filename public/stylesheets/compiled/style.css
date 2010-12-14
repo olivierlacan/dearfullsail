@@ -371,7 +371,7 @@ a:link, a:visited {
 /* line 21, ../../../app/stylesheets/partials/_base.sass */
 a:hover, a:focus {
   color: orange;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 /* line 24, ../../../app/stylesheets/partials/_base.sass */
@@ -436,26 +436,30 @@ body {
   padding: 0 1em;
   background: rgba(0, 0, 0, 0.1);
 }
+/* line 29, ../../../app/stylesheets/partials/_page.sass */
+#container > header > ul > li.name {
+  font-weight: bold;
+}
 
-/* line 30, ../../../app/stylesheets/partials/_page.sass */
+/* line 32, ../../../app/stylesheets/partials/_page.sass */
 #main {
   width: 90%;
   margin: 3em auto;
   clear: both;
 }
-/* line 34, ../../../app/stylesheets/partials/_page.sass */
+/* line 36, ../../../app/stylesheets/partials/_page.sass */
 #main > h1 {
   font-size: 2em;
   padding: 1em 1em 0.25em 0;
   margin: 0 0 0.5em 0;
   border-bottom: 1px solid black;
 }
-/* line 39, ../../../app/stylesheets/partials/_page.sass */
+/* line 41, ../../../app/stylesheets/partials/_page.sass */
 #main .newmessage {
   float: right;
   margin-top: -3em;
 }
-/* line 43, ../../../app/stylesheets/partials/_page.sass */
+/* line 45, ../../../app/stylesheets/partials/_page.sass */
 #main ul li {
   display: block;
   clear: both;
@@ -463,7 +467,7 @@ body {
   margin-bottom: 1em;
   overflow: hidden;
 }
-/* line 50, ../../../app/stylesheets/partials/_page.sass */
+/* line 52, ../../../app/stylesheets/partials/_page.sass */
 #main ul li .vote {
   display: block;
   float: left;
@@ -475,43 +479,43 @@ body {
   text-align: center;
   font-size: 1.3em;
 }
-/* line 60, ../../../app/stylesheets/partials/_page.sass */
+/* line 62, ../../../app/stylesheets/partials/_page.sass */
 #main ul li .vote a {
   display: block;
   margin: 15px 0;
   color: white;
 }
-/* line 65, ../../../app/stylesheets/partials/_page.sass */
+/* line 67, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article {
   float: left;
   width: 95%;
   padding: 0;
   border-right: 1px solid white;
 }
-/* line 70, ../../../app/stylesheets/partials/_page.sass */
+/* line 72, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article header {
   padding: 0 2em;
 }
-/* line 72, ../../../app/stylesheets/partials/_page.sass */
+/* line 74, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article header h1 {
   display: block;
   clear: both;
   font-size: 2em;
 }
-/* line 76, ../../../app/stylesheets/partials/_page.sass */
+/* line 78, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article header p {
   clear: left;
 }
-/* line 78, ../../../app/stylesheets/partials/_page.sass */
+/* line 80, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article section {
   padding: 0.5em 2em;
 }
-/* line 80, ../../../app/stylesheets/partials/_page.sass */
+/* line 82, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article footer {
   text-align: right;
   padding: 0.5em 1em 1em;
 }
-/* line 83, ../../../app/stylesheets/partials/_page.sass */
+/* line 85, ../../../app/stylesheets/partials/_page.sass */
 #main ul li article footer a {
   display: block;
   float: right;
@@ -519,7 +523,7 @@ body {
   margin: 1em;
 }
 
-/* line 99, ../../../app/stylesheets/partials/_page.sass */
+/* line 101, ../../../app/stylesheets/partials/_page.sass */
 form .formtastic fieldset {
   overflow: hidden;
   background: blue;
