@@ -1,4 +1,7 @@
 class MessagesController < ApplicationController
+  
+  before_filter :authenticate_student!, :except => [:show, :index] 
+  
   # GET /messages
   # GET /messages.xml
   def index
