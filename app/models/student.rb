@@ -2,7 +2,7 @@ class Student < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :recoverable, 
-          :rememberable, :trackable, :validatable
+          :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :first_name, :last_name, :bio, :date, 
