@@ -1,7 +1,7 @@
 class Message < ActiveRecord::Base
   belongs_to :student
   has_many :votes do
-    def charge
+    def vote_count
       map(&:charge).sum
     end
   end
