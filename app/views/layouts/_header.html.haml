@@ -1,10 +1,12 @@
 %h1=link_to "Dear Full Sail,", "/"
 %ul
   - if current_student
+    %li.name= current_student.first_name + " " + current_student.last_name
     %li= link_to 'New Message', new_message_path
     %li= link_to 'Sign Out', destroy_student_session_path
   - else
     %li= link_to 'Sign In', new_student_session_path
+    %li= link_to 'Sign Up', new_student_path
   
 -# = semantic_form_for @student do |f|
 -#   - f.inputs do
