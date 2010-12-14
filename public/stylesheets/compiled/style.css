@@ -548,3 +548,8 @@ form .formtastic fieldset {
   font-weight: normal;
   display: block;
 }
+
+/* line 1, ../../../app/stylesheets/partials/_notices.sass */
+.notice {
+  margin: 1em;
+}
