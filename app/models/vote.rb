@@ -5,6 +5,9 @@ class Vote < ActiveRecord::Base
   # Validation
   validates :message_id,
             :presence => true
+  validates :message_id,
+            :uniqueness => { :scope => :student_id }
+            
   # validates :positive
   #             :presence => true
   # validates :student_id,
