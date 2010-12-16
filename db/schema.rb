@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101216064743) do
+ActiveRecord::Schema.define(:version => 20101216104141) do
 
   create_table "degrees", :force => true do |t|
     t.string   "name"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20101216064743) do
 
   create_table "messages", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description", :limit => 255
     t.date     "date"
     t.string   "type"
     t.datetime "created_at"
