@@ -12,7 +12,7 @@ class Student < ActiveRecord::Base
   has_many :votes
   
   # Validations
-  validates :first_name, :last_name, :email, :date,
+  validates :first_name, :last_name, :email,
             :presence => true
             
   def to_s
