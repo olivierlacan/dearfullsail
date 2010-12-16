@@ -31,6 +31,7 @@ GEM
     arel (2.0.4)
     bcrypt-ruby (2.1.2)
     builder (2.1.2)
+    cancan (1.4.1)
     compass (0.10.6)
       haml (>= 3.0.4)
     configuration (1.2.0)
@@ -103,6 +104,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cancan
   compass
   devise
   formtastic
