@@ -1,4 +1,7 @@
 class DegreesController < ApplicationController
+  
+  before_filter :authenticate_student!, :except => [:show, :index]
+  
   # GET /degrees
   # GET /degrees.xml
   def index

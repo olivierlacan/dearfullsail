@@ -1,4 +1,7 @@
 class VotesController < ApplicationController
+  
+  before_filter :authenticate_student!, :except => [:show, :index]
+  
   def index
     @votes = Vote.all
   end
@@ -25,6 +28,7 @@ class VotesController < ApplicationController
     
     # if the student is logged in (crappy)
     if current_student
+      # is there already a vote on that message by that same (current) student
       if @vote = @message.votes.find_by_student_id(current_student.id)
         @vote.charge = params[:charge] || 1
       else
