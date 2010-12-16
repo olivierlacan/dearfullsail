@@ -21,8 +21,8 @@ degrees = Degree.create([ { :initials => 'CA', :name => 'Computer Animation' },
                         ])
                     
 students = Student.create([ { :first_name => "Andrew", :last_name => "Smith", :degree_id => 1, :date => "2008-08-04", :email => "andrewsmith@fullsail.edu", :password => 'doodoo', :password_confirmation => 'doodoo' },
-                            { :first_name => "Zachary", :last_name => "Nicoll", :degree_id => 1, :date => "2009-05-04", :email => "j311yb34n@fullsail.edu", , :password => 'doodoo', :password_confirmation => 'doodoo' },
-                            { :first_name => "Olivier", :last_name => "Lacan", :degree_id => 1, :date => "2009-05-04", :email => "olivierlacan@fullsail.edu", , :password => 'doodoo', :password_confirmation => 'doodoo' },
-                            { :first_name => "Andrew", :last_name => "Smith", :degree_id => 1, :date => "2008-08-04", :email => "andrewsmith@fullsail.edu", , :password => 'doodoo', :password_confirmation => 'doodoo' } 
+                            { :first_name => "Zachary", :last_name => "Nicoll", :degree_id => 1, :date => "2009-05-04", :email => "j311yb34n@fullsail.edu", :password => 'doodoo', :password_confirmation => 'doodoo' },
+                            { :first_name => "Olivier", :last_name => "Lacan", :degree_id => 1, :date => "2009-05-04", :email => "olivierlacan@fullsail.edu", :password => 'doodoo', :password_confirmation => 'doodoo' },
+                            { :first_name => "Andrew", :last_name => "Smith", :degree_id => 1, :date => "2008-08-04", :email => "andrewsmith@fullsail.edu", :password => 'doodoo', :password_confirmation => 'doodoo' } 
                           ])
 students.each(&:confirm!)
