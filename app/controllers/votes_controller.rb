@@ -23,6 +23,7 @@ class VotesController < ApplicationController
   def create
     @message = Message.find(params[:message_id])
     
+    # if the student is logged in (crappy)
     if current_student
       if @vote = @message.votes.find_by_student_id(current_student.id)
         @vote.charge = params[:charge] || 1
