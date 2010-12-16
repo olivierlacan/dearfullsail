@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+  
+  before_filter :authenticate_student!, :except => [:show, :index, :new, :create, ]
+  
   # GET /students
   # GET /students.xml
   def index
