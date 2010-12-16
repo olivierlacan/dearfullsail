@@ -25,3 +25,6 @@ students = Student.create([ { :first_name => "Andrew", :last_name => "Smith", :d
                             { :first_name => "Olivier", :last_name => "Lacan", :degree_id => 12, :date => "2009-05-04", :email => "olivierlacan@fullsail.edu", :password => 'doodoo', :password_confirmation => 'doodoo' } 
                           ])
 students.each(&:confirm!)
+
+# messages = Message.create([ { :title => 'We should organize a Web DADA', :description => 'Many web students would benefits from an open lab that would take place regularly on campus and allow students to interact with each other regardless of their level in the degree. It would also be a great opportunity for students that are closer to final project to brush up on earlier concepts.', :student_id => 3 }
+#                           ])

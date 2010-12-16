@@ -11,6 +11,8 @@ class Student < ActiveRecord::Base
   has_many :messages
   has_many :votes
   
+  ROLES = %w[admin moderator author]
+  
   # Validations
   validates :first_name, :last_name, :email,
             :presence => true
