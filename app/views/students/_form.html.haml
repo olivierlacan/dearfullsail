@@ -9,8 +9,8 @@
     = f.input :first_name
     = f.input :last_name
     = f.input :bio, :as => :text, :label => "About"
-    = f.input :date, :label => "Starting Date"
-    = f.input :email, :label => "Full Sail Email"
+    -# = f.input :date, :label => "Starting Date"
+    = f.input :email, :label => "Full Sail Email", :hint => "this needs to end in @fullsail.edu"
     = f.input :password, :as => :password
     = f.input :degree_id, :as => :select, :collection => Degree.all
     
