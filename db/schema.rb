@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101213202613) do
+ActiveRecord::Schema.define(:version => 20101216064743) do
 
   create_table "degrees", :force => true do |t|
     t.string   "name"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(:version => 20101213202613) do
   add_index "students", ["reset_password_token"], :name => "index_students_on_reset_password_token", :unique => true
 
   create_table "votes", :force => true do |t|
-    t.string   "message_id"
-    t.string   "student_id"
+    t.integer  "message_id"
+    t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "charge"
