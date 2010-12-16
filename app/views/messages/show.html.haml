@@ -1,20 +1,15 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @message.title
-%p
-  %b Description:
-  = @message.description
-%p
-  %b Date:
-  = @message.date
-%p
-  %b Type:
-  = @message.type
-%p
-  %b Student:
-  = @message.student
+%h1= @message.title
+%p= @message.description
+%footer
+  %ul
+    %li Date:
+    = @message.date
+    %li Type:
+    = @message.type
+    %li Student:
+    = @message.student
 
 = link_to 'Edit', edit_message_path(@message)
 \|
