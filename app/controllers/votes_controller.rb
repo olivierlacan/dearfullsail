@@ -30,8 +30,10 @@ class VotesController < ApplicationController
     if current_student
       # is there already a vote on that message by that same (current) student
       if @vote = @message.votes.find_by_student_id(current_student.id)
+        # add the charge to his existing vote
         @vote.charge = params[:charge] || 1
       else
+        # if this student has never voted on this message, add a vote with the proper charge
         @vote = @message.votes.create(:student_id => current_student.id, :charge => params[:charge] || 1)
       end
     end
