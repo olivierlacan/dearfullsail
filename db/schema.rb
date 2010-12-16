@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20101216104141) do
 
   create_table "messages", :force => true do |t|
     t.string   "title"
-    t.text     "description", :limit => 255
+    t.text     "description"
     t.date     "date"
     t.string   "type"
     t.datetime "created_at"

@@ -1,7 +1,5 @@
 class CreateVotes < ActiveRecord::Migration
   def self.up
-    drop_table :votes
-    
     create_table :votes do |t|
       t.integer   :message_id
       t.integer   :student_id
