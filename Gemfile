@@ -16,6 +16,11 @@ group :development, :test do
   gem 'heroku'
 end
 
+# gems only required for production because Heroku is being a pooper
+group :production do
+  gem 'hassle', :git => 'git://github.com/Papipo/hassle.git'
+end
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
