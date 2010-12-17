@@ -10,23 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101216183253) do
-
-  create_table "abilities", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "assignements", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "assignments", :force => true do |t|
-    t.integer  "student_id"
-    t.integer  "role_id"
-    t.datetime "created_at"
-  end
+ActiveRecord::Schema.define(:version => 20101217021434) do
 
   create_table "degrees", :force => true do |t|
     t.string   "name"
@@ -45,14 +29,6 @@ ActiveRecord::Schema.define(:version => 20101216183253) do
     t.string   "student_id"
     t.integer  "vote_count",  :default => 0
   end
-
-  create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "roles", ["name"], :name => "index_roles_on_name"
 
   create_table "students", :force => true do |t|
     t.string   "first_name"
@@ -77,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20101216183253) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "role"
+    t.integer  "roles_mask"
   end
 
   add_index "students", ["confirmation_token"], :name => "index_students_on_confirmation_token", :unique => true
