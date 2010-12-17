@@ -11,7 +11,22 @@ class Student < ActiveRecord::Base
   has_many :messages
   has_many :votes
   
+  scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2 ** ROLES.index(roles.to_s)} > 0"}  }
+  
+  # array of available roles
   ROLES = %w[admin moderator author]
+  
+  def roles=(roles)
+    self.roles_mask = (roles & ROLES).map  { |r| 2 ** ROLES.index(r) }.sum
+  end
+  
+  def roles
+    ROLES.reject { |r| ((roles_mask || 0) & 2 ** ROLES.index(r)).zero? }
+  end
+  
+  def role_symbols
+    roles.map(&:to_sym)
+  end
   
   # Validations
   validates :first_name, :last_name, :email,
