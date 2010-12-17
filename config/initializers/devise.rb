@@ -73,7 +73,7 @@ Devise.setup do |config|
 
   # Regex to use to validate the email address
   # config.email_regexp = /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i
-  config.email_regexp = /^([\w\.%\+\-]+)@fullsail.edu$/i
+  config.email_regexp = /^([\w\.%\+\-]+)@fullsail\.(edu|com)$/i
   
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
