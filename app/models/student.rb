@@ -5,7 +5,7 @@ class Student < ActiveRecord::Base
           :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :first_name, :last_name, :bio, :date, 
+  attr_accessible :first_name, :last_name, :bio, :date, :roles,
                   :email, :password, :degree_id, :password_confirmation, :remember_me
   belongs_to :degree
   has_many :messages
@@ -26,6 +26,10 @@ class Student < ActiveRecord::Base
   
   def role_symbols
     roles.map(&:to_sym)
+  end
+  
+  def admin?
+    roles.include? 'admin'
   end
   
   # Validations
