@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
-  
-  before_filter :authenticate_student!, :except => [:show, :index, :new, :create, ]
+  before_filter :authenticate_student!, :only => [:destroy, :update]
+  before_filter :prevent_from_current_student, :only => [:new, :create]
   
   # GET /students
   # GET /students.xml
@@ -82,5 +82,9 @@ class StudentsController < ApplicationController
       format.html { redirect_to(students_url) }
       format.xml  { head :ok }
     end
+  end  
+  
+  def prevent_from_current_student
+    redirect_to root_url, :notice => 'You already have an account, silly.' if current_student && !current_student.admin?
   end
 end
