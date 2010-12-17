@@ -16,6 +16,6 @@
           = message.description
         %footer
           //= message.date
-
-          = link_to '', edit_message_path(message), :title => 'Edit', :class => 'icon', "data-icon" => 'p'
-          = link_to '', message, :confirm => 'Are you sure?', :method => :delete, :title => 'Destroy', :class => 'icon', "data-icon" => '#'
+          - if current_student && current_student.admin?
+            = link_to '', edit_message_path(message), :title => 'Edit', :class => 'icon', "data-icon" => 'p'
+            = link_to '', message, :confirm => 'Are you sure?', :method => :delete, :title => 'Destroy', :class => 'icon', "data-icon" => '#'

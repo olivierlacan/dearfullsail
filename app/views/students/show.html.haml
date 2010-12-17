@@ -18,6 +18,10 @@
 %p
   %b Degree:
   = @student.degree
+-# - if current_student.admin?
+%p
+  %b Role:
+  = @student.roles.to_sentence
 
 = link_to 'Edit', edit_student_path(@student)
 \|

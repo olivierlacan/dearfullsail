@@ -8,11 +8,13 @@
   = f.inputs do
     = f.input :first_name
     = f.input :last_name
-    = f.input :bio, :as => :text, :label => "About"
+    = f.input :bio, :as => :text, :label => "But about you..."
     -# = f.input :date, :label => "Starting Date"
-    = f.input :email, :label => "Full Sail Email", :hint => "this needs to end in @fullsail.edu"
-    = f.input :password, :as => :password
+    = f.input :email, :label => "Full Sail email", :hint => "this needs to end in @fullsail.edu, we don't want anybody climbing in our windows."
+    = f.input :password, :as => :password, :hint => 'make it count!'
     = f.input :degree_id, :as => :select, :collection => Degree.all
+    - if current_student && current_student.admin? 
+      = f.input :roles, :as => :check_boxes, :collection => Student::ROLES
     
   = f.buttons do
     = f.commit_button
