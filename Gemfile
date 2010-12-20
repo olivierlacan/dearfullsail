@@ -9,6 +9,8 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'formtastic'
 gem 'devise'
+gem 'hpricot'
+gem 'ruby_parser'
 # gem "cancan"
 
 # gems only required for development and not app functionality
