@@ -13,7 +13,7 @@ The Solution
 -------------
 Polling a sufficient proportion of Full Sail WDD students would allow instructors and program managers to get a better sense of what makes student tick, and not only months down the line. 
 
-Being a web focused degree, a web app seems like a much more efficient medium than sheets of scantron-like papers requiring tedious data-entry (something any business, let alone Full Sail, should have abandonned years ago). It also means asking students to use a medium they are familiar with to express their opinions.
+Being a web focused degree, a web app seems like a much more efficient medium than sheets of scantron-like papers requiring tedious data-entry (something any business, let alone Full Sail, should have abandoned years ago). It also means asking students to use a medium they are familiar with to express their opinions.
 
 This will surely increase the noise-to-signal ratio since the internets are hardly known for the tameness of their flames, but if we can verify students' identities (using their school-provided email accounts) we can at least limit the onslaught of trolls by not revelling in absolute anonymity. 
 
