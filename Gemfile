@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '8.1.2'
 gem 'compass'
 gem 'html5-boilerplate'
 gem 'haml'
